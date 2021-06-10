@@ -1,6 +1,9 @@
-/*
- See LICENSE folder for this sample’s licensing information.
- */
+//
+//  ScrumsView.swift
+//  Scrumdinger
+//
+//  Created by Nathan on 10/06/2021.
+//
 
 import SwiftUI
 
