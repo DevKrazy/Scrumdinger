@@ -1,10 +1,6 @@
-//
-//  DailyScrum.swift
-//  Scrumdinger
-//
-//  Created by Nathan on 09/06/2021.
-//
-
+/*
+See LICENSE folder for this sample’s licensing information.
+*/
 import SwiftUI
 
 struct DailyScrum {
@@ -13,7 +9,6 @@ struct DailyScrum {
     var lengthInMinutes: Int
     var color: Color
 }
-
 
 extension DailyScrum {
     static var data: [DailyScrum] {

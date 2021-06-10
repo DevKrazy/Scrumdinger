@@ -1,22 +1,16 @@
-//
-//  CardView.swift
-//  Scrumdinger
-//
-//  Created by Nathan on 09/06/2021.
-//
+/*
+ See LICENSE folder for this sample’s licensing information.
+ */
 
 import SwiftUI
 
 struct CardView: View {
-    let scrum: DailyScrum // why adding this property requires the CardView init to use this property as a parameter?
+    let scrum: DailyScrum
     var body: some View {
         VStack(alignment: .leading) {
-            
             Text(scrum.title)
                 .font(.headline)
-            
             Spacer()
-            
             HStack {
                 Label("\(scrum.attendees.count)", systemImage: "person.3")
                     .accessibilityElement(children: .ignore)
@@ -27,17 +21,16 @@ struct CardView: View {
                     .padding(.trailing, 20)
                     .accessibilityElement(children: .ignore)
                     .accessibilityLabel(Text("Meeting length"))
-                    .accessibilityValue(Text("\(scrum.lengthInMinutes)"))
+                    .accessibilityValue(Text("\(scrum.lengthInMinutes) minutes"))
             }
             .font(.caption)
-            
         }
         .padding()
         .foregroundColor(scrum.color.accessibleFontColor)
     }
 }
 
-struct Cardview_Previews: PreviewProvider {
+struct CardView_Previews: PreviewProvider {
     static var scrum = DailyScrum.data[0]
     static var previews: some View {
         CardView(scrum: scrum)
